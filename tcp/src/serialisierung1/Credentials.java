@@ -1,4 +1,4 @@
-package serializierung1;
+package serialisierung1;
 
 public class Credentials {
 	public final String login;
