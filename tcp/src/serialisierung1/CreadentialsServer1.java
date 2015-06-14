@@ -22,7 +22,7 @@ public class CreadentialsServer1 {
 				int b;
 				while ((b = in.read()) != -1) {
 					if (b == 0) {
-						// Marker dividing password from login string read
+						// Marker dividing password from login string was read
 						loginRead = true;
 					} else {
 						if (!loginRead)
