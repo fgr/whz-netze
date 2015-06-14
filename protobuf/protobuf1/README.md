@@ -19,6 +19,7 @@ Die entsprechende ZIP-Datei von [https://developers.google.com/protocol-buffers/
 ## Java: Einbinden der Protocol-Buffers-Bibliothek
 
 1. Um Protocol Buffers mit Java zu verwenden, wird die Bibliothek *protobuf.jar* benötigt; sie befindet sich hier: [http://mvnrepository.com/artifact/com.google.protobuf/protobuf-java/](http://mvnrepository.com/artifact/com.google.protobuf/protobuf-java/)
+  * Verwenden Sie dieselbe Version der Bibliothek, die Sie auch beim Compiler verwenden. Derzeit ist dies die stabile Version [http://central.maven.org/maven2/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar](http://central.maven.org/maven2/com/google/protobuf/protobuf-java/2.6.1/protobuf-java-2.6.1.jar).
 2. Diese Datei (protobuf.jar) muss wie gewohnt zum Build Path jedes Eclipse-Projektes hinzugefügt werden, das Protocol Buffers verwendet.
 
 ## C++: Einbinden der Protocol-Buffers-Bibliothek
