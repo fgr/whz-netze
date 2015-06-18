@@ -1,6 +1,8 @@
 # Details
 
-## [CredentialsServer0](CredentialsServer0.java) und [CredentialsClient0](CredentialsClient0.java)
+In diesem Beispiel (CredentialsServer/Client{0,1,2} wird versucht, zwei Strings vom Client zum Server zu übertragen.
+
+## 1. Versuch [CredentialsServer0](CredentialsServer0.java) und [CredentialsClient0](CredentialsClient0.java)
 
 Der [Client](CredentialsClient0.java) sendet *die Bytes* zweier Strings (c.login und c.password) zum Server:
 
