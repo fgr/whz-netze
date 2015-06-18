@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class CreadentialsServer1 {
+public class CredentialsServer1 {
 	public static void main(String[] args) throws Exception {
 		try (ServerSocket serverSocket = new ServerSocket(2016)) {
 			System.out.println("Server: Waiting for TCP connection on port " //

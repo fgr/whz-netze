@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class CreadentialsServer2 {
+public class CredentialsServer2 {
 	private static String deserializseStringFromCharachters(InputStream in) throws IOException {
 		int lenlen = in.read();
 		if (lenlen == -1)

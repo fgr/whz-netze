@@ -3,7 +3,7 @@ package serialisierung1;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class CreadentialsServer0 {
+public class CredentialsServer0 {
 	public static void main(String[] args) throws Exception {
 		try (ServerSocket serverSocket = new ServerSocket(2016)) {
 			System.out.println("Server: Waiting for TCP connection on port " //
