@@ -1,15 +1,15 @@
 # Details
 
-## [CreadentialsServer0](CreadentialsServer0.java) und [CreadentialsClient0](CreadentialsClient0.java)
+## [CredentialsServer0](CredentialsServer0.java) und [CredentialsClient0](CredentialsClient0.java)
 
-Der [Client](CreadentialsClient0.java) sendet *die Bytes* zweier Strings (c.login und c.password) zum Server:
+Der [Client](CredentialsClient0.java) sendet *die Bytes* zweier Strings (c.login und c.password) zum Server:
 
 ```Java
 out.write(c.login.getBytes());
 out.write(c.password.getBytes());
 ```
 
-Der [Server](CreadentialsServer0.java) versucht, diese Bytes wieder in zwei Strings (login und password) zu lesen:
+Der [Server](CredentialsServer0.java) versucht, diese Bytes wieder in zwei Strings (login und password) zu lesen:
 
 ```Java
 byte buf[] = new byte[1024];
