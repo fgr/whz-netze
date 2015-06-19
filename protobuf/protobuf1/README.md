@@ -47,3 +47,17 @@ C++:
 -> https://developers.google.com/protocol-buffers/docs/cpptutorial
 
 protoc -I=./protocol --cpp_out=cpp ./protocol/addressbook.proto
+
+# Übung
+
+Erzeugen Sie aus folgender Datenstruktur eine Protocol-Buffers-Implementierung:
+
+![Diagram](http://yuml.me/fcaf7b77) ([Edit-Link](http://yuml.me/edit/fcaf7b77))
+
+Erzeugen Sie also:
+
+1. Ein neues Eclipse-Java-Projekt.
+2. Eine Protocol-Buffers-Datei (geodat.proto), welche die Datenstruktur im Protocol-Buffers-Format beschreibt.
+3. Erzeugen Sie aus dieser Datei mithilfe von *protoc* eine der Datenstruktur entsprechende Java-Implementierung.
+4. Verwenden Sie diese Implementierung, um GeoData-Objekte zu serialisieren, über eine TCP-Verbindung zu übertragen und beim (Java-) Empfänger wieder in GeoDate-Objekte zu deserialisieren.
+
