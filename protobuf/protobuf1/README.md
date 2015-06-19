@@ -50,9 +50,15 @@ Das folgende Beispiel orientiert sich am [Protocol-Buffers-Tutorial](https://dev
   1. Projekt *protobuf1* auswählen und importieren.
 2. Im Java-Package [`com.example.tutorial.main`](java/protobuf1/src/com/example/tutorial/main) befinden sich mehrere Beispiele, die die Serialisierung von `Person`-Objekten, den Transport der serialisierten Daten via TCP und die De-Serialisierung in `Person`-Objekten beim Empfänger demonstrieren.
 
+#### Java-Implementierung der Protcol-Buffers-Klassen erzeugen:
+
+In der Datei [addressbook.proto](protocol/addressbook.proto) werden die *Person*- und *AddressBook*-Datenstrukturen als Protocol-Buffers-Typen (sogenannte *Messages*) definiert. Diese Definition wird verwendet, um die Java-Implementierung (und die Implementierung für weitere Programmiersprachen wie C++) zu generieren, die für die Serialisierung und De-Serialisierung von  `Person`- und `AddressBook`-Objekten verantwortlich ist. Die Java-Implementierung befindet sich in der Klasse [`AddressBookProtos`](java/protobuf1/src/com/example/tutorial/AddressBookProtos.java).
+
+Diese Klasse kann mit folgendem Befehl automatisch vom Protocol-Buffers-Compiler aus der Datei [addressbook.proto](protocol/addressbook.proto) generiert werden (Verzeichnis [*protobuf1*](/) ist das dem [Java-Projekt](java/protobuf1) übergeordnete Verzeichnis):
+```
 cd protobuf1
- 
 protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
+```
  
 ### C++:
 
