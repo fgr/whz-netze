@@ -54,7 +54,7 @@ Das folgende Beispiel orientiert sich am [Protocol-Buffers-Tutorial](https://dev
 
 In der Datei [addressbook.proto](protocol/addressbook.proto) werden die *Person*- und *AddressBook*-Datenstrukturen als Protocol-Buffers-Typen (sogenannte *Messages*) definiert. Diese Definition wird verwendet, um die Java-Implementierung (und die Implementierung für weitere Programmiersprachen wie C++) zu generieren, die für die Serialisierung und De-Serialisierung von  `Person`- und `AddressBook`-Objekten verantwortlich ist. Die Java-Implementierung befindet sich in der Klasse [`AddressBookProtos`](java/protobuf1/src/com/example/tutorial/AddressBookProtos.java).
 
-Diese Klasse kann mit folgendem Befehl automatisch vom Protocol-Buffers-Compiler aus der Datei [addressbook.proto](protocol/addressbook.proto) generiert werden (Verzeichnis [*protobuf1*](/) ist das dem [Java-Projekt](java/protobuf1) übergeordnete Verzeichnis):
+Diese Klasse kann mit folgendem Befehl automatisch vom Protocol-Buffers-Compiler aus der Datei [addressbook.proto](protocol/addressbook.proto) generiert werden (das Verzeichnis [*protobuf1*](protobuf/protobuf1) ist das dem [Java-Verzeichnis](protobuf/protobuf1/java/) übergeordnete Verzeichnis):
 ```
 cd protobuf1
 protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
@@ -64,7 +64,18 @@ protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
 
 (Vgl. [Protocol-Buffers-Tutorial für C++](https://developers.google.com/protocol-buffers/docs/cpptutorial).)
 
+#### C++-Beispiele:
+
+Im Verzeichnis [cpp](protobuf/protobuf1/cpp/) befindet sich Beispiel-Code für einen TCP-Server, der ein mit Protocol Buffers serialisiertes `Person`-Objekt zum Client sendet.
+
+#### C++-Implementierung der Protcol-Buffers-Klassen erzeugen:
+
+Die C++-Implementierung kann mit folgendem Befehl automatisch vom Protocol-Buffers-Compiler aus der Datei [addressbook.proto](protocol/addressbook.proto) generiert werden (das Verzeichnis [*protobuf1*](protobuf/protobuf1) ist das dem [C++-Verzeichnis](protobuf/protobuf1/cpp/) übergeordnete Verzeichnis):
+
+```
+cd protobuf1
 protoc -I=./protocol --cpp_out=cpp ./protocol/addressbook.proto
+```
 
 # Übung
 
