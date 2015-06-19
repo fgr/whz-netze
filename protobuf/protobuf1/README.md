@@ -66,7 +66,7 @@ protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
 
 #### C++-Beispiele:
 
-Im Verzeichnis [cpp](cpp/) befindet sich Beispiel-Code für einen TCP-Server, der ein mit Protocol Buffers serialisiertes `Person`-Objekt zum Client sendet.
+Im Verzeichnis [cpp](cpp/) befindet sich [Beispiel-Code](cpp/personsender1.cc) für einen TCP-Server, der ein mit Protocol Buffers serialisiertes `Person`-Objekt zum Client sendet.
 
 #### C++-Implementierung der Protcol-Buffers-Klassen erzeugen:
 
