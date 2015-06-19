@@ -40,6 +40,16 @@ Das folgende Beispiel orientiert sich am [Protocol-Buffers-Tutorial](https://dev
 
 (Vgl. [Protocol-Buffers-Tutorial für Java](https://developers.google.com/protocol-buffers/docs/javatutorial).)
 
+#### Beispielprogramme ausführen:
+
+1. Eclipse-Projekt auschecken
+ 1. In Eclipse: File > Import... > Git > Project from Git
+ 2. Git-Clone-URI: https://github.com/fgr/whz-netze
+ 3. ...
+ 4. Import existing projects
+  1. Projekt *protobuf1* auswählen und importieren.
+2. Im Java-Package [`com.example.tutorial.main`](java/protobuf1/src/com/example/tutorial/main) befinden sich mehrere Beispiele, die die Serialisierung von `Person`-Objekten, den Transport der serialisierten Daten via TCP und die De-Serialisierung in `Person`-Objekten beim Empfänger demonstrieren.
+
 cd protobuf1
  
 protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
