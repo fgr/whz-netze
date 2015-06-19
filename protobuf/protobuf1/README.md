@@ -47,7 +47,7 @@ Das folgende Beispiel orientiert sich am [Protocol-Buffers-Tutorial](https://dev
  2. Git-Clone-URI: https://github.com/fgr/whz-netze
  3. ...
  4. Import existing projects
-  1. Projekt *protobuf1* auswählen und importieren.
+  1. Projekt [protobuf1](java/protobuf1) auswählen und importieren.
 2. Im Java-Package [`com.example.tutorial.main`](java/protobuf1/src/com/example/tutorial/main) befinden sich mehrere Beispiele, die die Serialisierung von `Person`-Objekten, den Transport der serialisierten Daten via TCP und die De-Serialisierung in `Person`-Objekten beim Empfänger demonstrieren.
 
 #### Java-Implementierung der Protcol-Buffers-Klassen erzeugen:
