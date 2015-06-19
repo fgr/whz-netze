@@ -32,19 +32,21 @@ sudo apt-get install libprotobuf-dev
 
 # Entwicklung mit Protocol Buffers
 
-## TODO
+## Beispielprojekt
 
-Java (Eclipse-Projekt):
+Das folgende Beispiel orientiert sich am [Protocol-Buffers-Tutorial](https://developers.google.com/protocol-buffers/docs/tutorials)
 
--> https://developers.google.com/protocol-buffers/docs/javatutorial
+### Java (Eclipse-Projekt):
+
+(Vgl. [Protocol-Buffers-Tutorial für Java](https://developers.google.com/protocol-buffers/docs/javatutorial).)
 
 cd protobuf1
  
 protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
  
-C++:
+### C++:
 
--> https://developers.google.com/protocol-buffers/docs/cpptutorial
+(Vgl. [Protocol-Buffers-Tutorial für C++](https://developers.google.com/protocol-buffers/docs/cpptutorial).)
 
 protoc -I=./protocol --cpp_out=cpp ./protocol/addressbook.proto
 
@@ -54,10 +56,11 @@ Erzeugen Sie aus folgender Datenstruktur eine Protocol-Buffers-Implementierung:
 
 ![Diagram](http://yuml.me/fcaf7b77) ([Edit-Link](http://yuml.me/edit/fcaf7b77))
 
-Erzeugen Sie also:
+Führen Sie folgende Schritte aus, um für diese Datenstruktur in eine Protocol-Buffers-Implementierung zu erhalten:
 
-1. Ein neues Eclipse-Java-Projekt.
-2. Eine Protocol-Buffers-Datei (geodat.proto), welche die Datenstruktur im Protocol-Buffers-Format beschreibt.
+1. Neues Eclipse-Java-Projekt erzeugen.
+2. Eine Protocol-Buffers-Datei (geodata.proto) erzeugen
+  1. Datenstruktur im [Protocol-Buffers-Format](https://developers.google.com/protocol-buffers/docs/proto) in dieser Datei beschreiben.
 3. Erzeugen Sie aus dieser Datei mithilfe von *protoc* eine der Datenstruktur entsprechende Java-Implementierung.
-4. Verwenden Sie diese Implementierung, um GeoData-Objekte zu serialisieren, über eine TCP-Verbindung zu übertragen und beim (Java-) Empfänger wieder in GeoDate-Objekte zu deserialisieren.
+4. Verwenden Sie diese Implementierung, um GeoData-Objekte zu serialisieren, über eine TCP-Verbindung zu übertragen und beim (Java-) Empfänger wieder in GeoData-Objekte zu de-serialisieren.
 
