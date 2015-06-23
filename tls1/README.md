@@ -2,6 +2,10 @@
 
 # 1. Verschlüsselte Socket-Kommunikation mit *automatisch* generierten Schlüsseln
 
+Aufgabe: TlsClient1.java entsprechend der Vorgabe implementieren.
+
+Siehe auch: [TlsServer1](src/TlsServer1.java).
+
 # 2. Verschlüsselte Socket-Kommunikation mit *eigenen, manuell generierten* Schlüsseln
 
 ## Erstellen von Schlüsseln
@@ -34,6 +38,12 @@ Is CN=server1, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
 ### (Self-Signed-)Zertifikat (des Servers auf Client-Seite) importieren
 
 ```<jdk>/bin/keytool -importcert -alias serverkey1 -trustcacerts -file serverkey1.cer -keystore myclienttruststore.jks -storetype jks -storepass clientpw```
+
+## Aufgabe
+
+TlsClient2.java entsprechend der Vorgabe implementieren.
+
+Siehe auch: [TlsServer2](src/TlsServer2.java).
 
 # 3. Client-Authentifizierung
 
