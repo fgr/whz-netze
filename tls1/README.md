@@ -4,7 +4,7 @@
 
 Aufgabe: TlsClient1.java entsprechend der Vorgabe implementieren.
 
-Siehe auch: [TlsServer1](src/TlsServer1.java).
+Siehe auch: [TlsServer1](src/tls1/TlsServer1.java).
 
 # 2. Verschlüsselte Socket-Kommunikation mit *eigenen, manuell generierten* Schlüsseln
 
@@ -43,7 +43,7 @@ Is CN=server1, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown correct?
 
 TlsClient2.java entsprechend der Vorgabe implementieren.
 
-Siehe auch: [TlsServer2](src/TlsServer2.java).
+Siehe auch: [TlsServer2](src/tls1/TlsServer2.java).
 
 # 3. Client-Authentifizierung
 
