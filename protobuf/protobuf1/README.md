@@ -32,18 +32,62 @@ sudo apt-get install libprotobuf-dev
 
 # Entwicklung mit Protocol Buffers
 
-## TODO
+## Beispielprojekt
 
-Java (Eclipse-Projekt):
+Das folgende Beispiel orientiert sich am [Protocol-Buffers-Tutorial](https://developers.google.com/protocol-buffers/docs/tutorials)
 
--> https://developers.google.com/protocol-buffers/docs/javatutorial
+### Java (Eclipse-Projekt):
 
+(Vgl. [Protocol-Buffers-Tutorial für Java](https://developers.google.com/protocol-buffers/docs/javatutorial).)
+
+#### Beispielprogramme ausführen:
+
+1. Eclipse-Projekt auschecken
+ 1. In Eclipse: File > Import... > Git > Project from Git
+ 2. Git-Clone-URI: https://github.com/fgr/whz-netze
+ 3. ...
+ 4. Import existing projects
+  1. Projekt [protobuf1](java/protobuf1) auswählen und importieren.
+2. Im Java-Package [`com.example.tutorial.main`](java/protobuf1/src/com/example/tutorial/main) befinden sich mehrere Beispiele, die die Serialisierung von `Person`-Objekten, den Transport der serialisierten Daten via TCP und die De-Serialisierung in `Person`-Objekten beim Empfänger demonstrieren.
+
+#### Java-Implementierung der Protcol-Buffers-Klassen erzeugen:
+
+In der Datei [addressbook.proto](protocol/addressbook.proto) werden die *Person*- und *AddressBook*-Datenstrukturen als Protocol-Buffers-Typen (sogenannte *Messages*) definiert. Diese Definition wird verwendet, um die Java-Implementierung (und die Implementierung für weitere Programmiersprachen wie C++) zu generieren, die für die Serialisierung und De-Serialisierung von  `Person`- und `AddressBook`-Objekten verantwortlich ist. Die Java-Implementierung befindet sich in der Klasse [`AddressBookProtos`](java/protobuf1/src/com/example/tutorial/AddressBookProtos.java).
+
+Diese Klasse kann mit folgendem Befehl automatisch vom Protocol-Buffers-Compiler aus der Datei [addressbook.proto](protocol/addressbook.proto) generiert werden (das Verzeichnis [*protobuf1*](.) ist das dem [Java-Verzeichnis](protobuf/protobuf1/java/) übergeordnete Verzeichnis):
+```
 cd protobuf1
- 
 protoc -I=./protocol --java_out=java/src ./protocol/addressbook.proto
+```
  
-C++:
+### C++:
 
--> https://developers.google.com/protocol-buffers/docs/cpptutorial
+(Vgl. [Protocol-Buffers-Tutorial für C++](https://developers.google.com/protocol-buffers/docs/cpptutorial).)
 
+#### C++-Beispiele:
+
+Im Verzeichnis [cpp](cpp/) befindet sich [Beispiel-Code](cpp/personsender1.cc) für einen TCP-Server, der ein mit Protocol Buffers serialisiertes `Person`-Objekt zum Client sendet.
+
+#### C++-Implementierung der Protcol-Buffers-Klassen erzeugen:
+
+Die C++-Implementierung kann mit folgendem Befehl automatisch vom Protocol-Buffers-Compiler aus der Datei [addressbook.proto](protocol/addressbook.proto) generiert werden (das Verzeichnis [*protobuf1*](.) ist das dem [C++-Verzeichnis](cpp/) übergeordnete Verzeichnis):
+
+```
+cd protobuf1
 protoc -I=./protocol --cpp_out=cpp ./protocol/addressbook.proto
+```
+
+# Übung
+
+Erzeugen Sie aus folgender Datenstruktur eine Protocol-Buffers-Implementierung:
+
+![Diagram](http://yuml.me/fcaf7b77) ([Edit-Link](http://yuml.me/edit/fcaf7b77))
+
+Führen Sie folgende Schritte aus, um für diese Datenstruktur in eine Protocol-Buffers-Implementierung zu erhalten:
+
+1. Neues Eclipse-Java-Projekt erzeugen.
+2. Eine Protocol-Buffers-Datei (geodata.proto) erzeugen
+  1. Datenstruktur im [Protocol-Buffers-Format](https://developers.google.com/protocol-buffers/docs/proto) in dieser Datei beschreiben.
+3. Erzeugen Sie aus dieser Datei mithilfe von *protoc* eine der Datenstruktur entsprechende Java-Implementierung.
+4. Verwenden Sie diese Implementierung, um GeoData-Objekte zu serialisieren, über eine TCP-Verbindung zu übertragen und beim (Java-) Empfänger wieder in GeoData-Objekte zu de-serialisieren.
+
