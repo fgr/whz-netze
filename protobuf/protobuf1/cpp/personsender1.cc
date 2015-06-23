@@ -27,8 +27,8 @@ void tcpsession(socket_ptr sock) {
     // Create data to be sent to client
     tutorial::Person john;
     john.set_id(1234);
-    john.set_name("John Doe");
-    john.set_email("jdoe@example.com");
+    john.set_name("Heinz Mustermann");
+    john.set_email("heinz@example.com");
     {
       tutorial::Person::PhoneNumber *phone_number = john.add_phone();
       phone_number->set_number("555-4321");
